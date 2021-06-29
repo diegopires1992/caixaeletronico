@@ -33,7 +33,7 @@
 }
 
 #containerNotas>img {
-    width: 10rem;
+    width: 16rem;
     padding: 0.5rem;
 }
 
@@ -56,19 +56,18 @@
 
 #saldoValue {
     padding: 0.5rem;
-    font-size: 1.1em;
+    font-size: 2.5em;
 }
 
 input {
-    width: 10rem;
+    width: 15rem;
+    height: 3rem;
     padding: 0 1.5rem;
     margin-top: 1rem;
-    height: 2rem;
     border-radius: 0.25rem;
     border: 1px solid #d7d7d7;
     background: #e7e9ee;
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
 }
 
@@ -89,8 +88,8 @@ input:focus {
 
 button {
     padding: 0 1.5rem;
-    width: 10rem;
-    height: 2rem;
+    width: 15rem;
+    height: 3rem;
     background: #E52E4D;
     color: #FFF;
     border-radius: 0.25rem;
@@ -109,7 +108,7 @@ button {
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 3em;
     padding: 0.5rem;
     color: #33CC95;
 }
