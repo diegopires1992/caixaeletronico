@@ -11,17 +11,20 @@ let notas = [
 ];
 
 function retiradaNotas(valor) {
+    saldo = saldo - valor;
+
     let notasRetiradas = [];
 
     for (let i = 0; i < notas.length; i++) {
         if (valor >= notas[i].valor && notas[i].quantidade > 0) {
             valor = valor - notas[i].valor;
-            notas[i].quantidade = notas[i].quantidade - 1
-            notasRetiradas = [...notasRetiradas, { nota: notas[i].valor }]
+            notas[i].quantidade = notas[i].quantidade - 1;
+            notasRetiradas = [...notasRetiradas, { nota: notas[i].valor }];
             i--
         }
 
     }
+
     return notasRetiradas
 }
 
@@ -41,26 +44,25 @@ function valorRetirada() {
         image.style.display = 'none';
     }
     if (saldoRetirada > saldo || saldoRetirada < 0) {
-        document.getElementById("notasRetiradas").innerHTML = "Saldo insuficiente"
+        document.getElementById("notasRetiradas").innerHTML = "Saldo insuficiente";
         return
     }
-
+    if (!Number.isInteger(saldoRetirada)) {
+        document.getElementById("notasRetiradas").innerHTML = "Não aceitamos centavos";
+        return
+    }
     if (!saldoRetirada) {
-        document.getElementById("notasRetiradas").innerHTML = "Insira um valor"
+        document.getElementById("notasRetiradas").innerHTML = "Insira um valor";
         return
     }
-
-
-    saldo = saldo - saldoRetirada;
-
 
     let displayNotas = retiradaNotas(saldoRetirada);
 
     for (let i = 0; i < displayNotas.length; i++) {
-        document.getElementById("notasRetiradas").innerHTML = ""
-        const image = document.createElement('img')
-        image.src = `./image/nota${displayNotas[i].nota}.png`
-        document.getElementById("containerNotas").appendChild(image)
+        document.getElementById("notasRetiradas").innerHTML = "";
+        const image = document.createElement('img');
+        image.src = `./image/nota${displayNotas[i].nota}.png`;
+        document.getElementById("containerNotas").appendChild(image);
     }
 
     document.getElementById("retiradaValue").value = 0;
