@@ -49,7 +49,18 @@
     height: 1.5em;
 }
 
+#display {
+    display: flex;
+    align-items: center;
+}
+
+#saldoValue {
+    padding: 0.5rem;
+    font-size: 1.1em;
+}
+
 input {
+    width: 10rem;
     padding: 0 1.5rem;
     margin-top: 1rem;
     height: 2rem;
@@ -78,6 +89,7 @@ input:focus {
 
 button {
     padding: 0 1.5rem;
+    width: 10rem;
     height: 2rem;
     background: #E52E4D;
     color: #FFF;
@@ -97,6 +109,7 @@ button {
 }
 
 h2 {
+    font-size: 1.5em;
     padding: 0.5rem;
     color: #33CC95;
 }

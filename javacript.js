@@ -30,7 +30,6 @@ function retiradaNotas(valor) {
 
 setInterval(() => {
     saldoValue.innerHTML = saldo.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
-
 }, 10)
 
 
